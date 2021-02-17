@@ -6,14 +6,14 @@ using UnityEngine;
 public class Testing : MonoBehaviour {
     private HexGrid grid;
     private void Start() {
-        grid = new HexGrid(5, 3, 5f);
+        grid = new HexGrid(5, 5, 5f);
     }
 
     private void Update()
     {
         
         if (Input.GetMouseButtonDown(0)) {
-            grid.setValue(Camera.main.ScreenToWorldPoint(Input.mousePosition), 3);
+            grid.oneMore(Camera.main.ScreenToWorldPoint(Input.mousePosition));
         }
 
         if (Input.GetMouseButtonDown(1)) {
